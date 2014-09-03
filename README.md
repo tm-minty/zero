@@ -1,9 +1,8 @@
 # Zero
-====
 Generating N files with 1Gb of zeros
 
 ## Building
-### Linux
+### Linux & MacOs
 ```
 > gcc zero.c -o zero
 ```
