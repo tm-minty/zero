@@ -13,20 +13,14 @@
 #endif
 
 const int BLOCK_SIZE = 1024;
-const int BLOCK_COUNT = 1024 * 1024;
+const int BLOCK_COUNT = 1024 * 200;// 1024;
 
-void createBlock (int * block, int size) {
-	int i;
-	for (i = 0; i < size; i++) {
-		block[i] = 0;
-	}
-}
 
 void generateFile (char * filename) {
 	FILE *fp = fopen(filename, "w+");
 	
 	int block[BLOCK_SIZE];
-	createBlock(block, BLOCK_SIZE);
+	memset(block, 0, BLOCK_SIZE);
 
 	double i;
 	for (i = 0; i < BLOCK_COUNT; i++) {
