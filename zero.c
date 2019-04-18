@@ -13,12 +13,12 @@
 #endif
 
 const int BLOCK_SIZE = 1024;
-const int BLOCK_COUNT = 1024 * 200;// 1024;
+const int BLOCK_COUNT = 1024 * 1024;
 
 
 void generateFile (char * filename) {
 	FILE *fp = fopen(filename, "w+");
-	
+
 	int block[BLOCK_SIZE];
 	memset(block, 0, BLOCK_SIZE);
 
@@ -60,7 +60,7 @@ int main (int argc, char ** argv) {
 	for (i = 0; i < count; i++) {
 
 		time_begin = clock();
-		
+
 		printf("Generating file #%i... ", i + 1);
 
 		sprintf(filename, "%s_%i", filename_template, i + 1);
